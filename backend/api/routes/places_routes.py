@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Query
 from typing import List, Optional
-from app.services.places_service import PlacesService
-from app.schemas.place_schema import Place, PlaceCreate, PlaceResponse
-from app.utils.logger import log_info, log_error
+from api.services.places_service import PlacesService
+from api.schemas.place_schema import Place, PlaceCreate, PlaceResponse
+from api.utils.logger import log_info, log_error
 
 
 router = APIRouter(prefix="/places", tags=["places"])

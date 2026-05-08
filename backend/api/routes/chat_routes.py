@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 from datetime import datetime, timedelta
-from app.config.settings import settings
+from api.config.settings import settings
 
 router = APIRouter(prefix="/chat", tags=["chat"])
 

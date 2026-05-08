@@ -1,6 +1,6 @@
 import httpx
-from app.config.settings import settings
-from app.utils.logger import log_info, log_error
+from api.config.settings import settings
+from api.utils.logger import log_info, log_error
 from typing import List, Dict, Any, Optional
 
 

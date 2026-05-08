@@ -1,7 +1,7 @@
-from app.repositories.places_repository import PlacesRepository
-from app.services.google_places_service import GooglePlacesService
-from app.utils.deduplication import check_duplicate
-from app.utils.logger import log_info, log_error
+from api.repositories.places_repository import PlacesRepository
+from api.services.google_places_service import GooglePlacesService
+from api.utils.deduplication import check_duplicate
+from api.utils.logger import log_info, log_error
 from typing import List, Dict, Any
 
 

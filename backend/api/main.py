@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.config.settings import settings
-from app.routes.places_routes import router as places_router
-from app.routes.chat_routes import router as chat_router
-from app.utils.logger import log_info
+from api.config.settings import settings
+from api.routes.places_routes import router as places_router
+from api.routes.chat_routes import router as chat_router
+from api.utils.logger import log_info
 
 
 # Crear app

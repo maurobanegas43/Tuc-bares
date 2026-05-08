@@ -1,5 +1,5 @@
 from typing import List, Optional
-from app.database.connection import get_supabase_client
+from api.database.connection import get_supabase_client
 
 
 class PlacesRepository:
