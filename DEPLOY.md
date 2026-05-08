@@ -14,7 +14,7 @@
 1. **Sube tu código a GitHub**
    ```bash
    git add .
-   git commit -m "Fix: Configuración para deploy en Render"
+   git commit -m "Fix: Optimización para build en Render"
    git push origin main
    ```
 
@@ -36,6 +36,14 @@
    
    **Frontend:**
    - `VITE_API_URL`: https://tuc-bares-api.onrender.com (URL de tu backend)
+
+### Optimizaciones aplicadas
+
+- ✅ Versiones fijas de dependencias para builds reproducibles
+- ✅ Python 3.11.9 (más estable que 3.14 para producción)
+- ✅ Build command optimizado
+- ✅ Frontend configurado como static site (más eficiente)
+- ✅ Archivos runtime.txt y .python-version agregados
 
 ### Opción 2: Deploy manual
 
