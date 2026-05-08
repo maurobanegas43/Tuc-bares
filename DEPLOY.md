@@ -28,14 +28,14 @@
    En cada servicio, agrega:
    
    **Backend:**
-   - `SUPABASE_URL`: https://zzukuvuieulyqfneygav.supabase.co
+    - `SUPABASE_URL`: https://tu-proyecto.supabase.co
    - `SUPABASE_KEY_ANON`: tu_anon_key
    - `SUPABASE_KEY_ROLE`: tu_service_role_key
    - `GOOGLE_PLACES_API_KEY`: tu_google_api_key
    - `GEMINI_API_KEY`: tu_gemini_api_key
    
-   **Frontend:**
-   - `VITE_API_URL`: https://tuc-bares-api.onrender.com (URL de tu backend)
+    **Frontend:**
+    - `VITE_API_URL`: https://tu-backend.onrender.com
 
 ### Optimizaciones aplicadas
 
@@ -63,7 +63,7 @@ Si el deploy con Blueprint tiene problemas, usa deploy manual:
 4. Environment Variables (en el dashboard):
    ```
    PYTHON_VERSION=3.11.9
-   SUPABASE_URL=https://zzukuvuieulyqfneygav.supabase.co
+    SUPABASE_URL=https://tu-proyecto.supabase.co
    SUPABASE_KEY_ANON=tu_anon_key
    SUPABASE_KEY_ROLE=tu_service_role_key
    GOOGLE_PLACES_API_KEY=tu_google_api_key
