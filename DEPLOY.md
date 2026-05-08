@@ -45,27 +45,48 @@
 - ✅ Frontend configurado como static site (más eficiente)
 - ✅ Archivos runtime.txt y .python-version agregados
 
-### Opción 2: Deploy manual
+### Opción 2: Deploy manual (Si Blueprint no funciona)
+
+Si el deploy con Blueprint tiene problemas, usa deploy manual:
 
 #### Backend:
-1. New → Web Service
-2. Conecta tu repo
+1. En Render Dashboard: New → Web Service
+2. Conecta tu repositorio
 3. Configuración:
    - **Name**: tuc-bares-api
-   - **Runtime**: Python 3
-   - **Build Command**: `cd backend && pip install -r requirements.txt`
-   - **Start Command**: `cd backend && uvicorn api.main:app --host 0.0.0.0 --port $PORT`
-   - **Environment Variables**: Agrega todas las variables mencionadas arriba
+   - **Root Directory**: backend
+   - **Environment**: Python 3
+   - **Build Command**: `pip install --upgrade pip && pip install -r requirements.txt`
+   - **Start Command**: `uvicorn api.main:app --host 0.0.0.0 --port $PORT`
+   - **Plan**: Free
+
+4. Environment Variables (en el dashboard):
+   ```
+   PYTHON_VERSION=3.11.9
+   SUPABASE_URL=https://zzukuvuieulyqfneygav.supabase.co
+   SUPABASE_KEY_ANON=tu_anon_key
+   SUPABASE_KEY_ROLE=tu_service_role_key
+   GOOGLE_PLACES_API_KEY=tu_google_api_key
+   GEMINI_API_KEY=tu_gemini_api_key
+   APP_HOST=0.0.0.0
+   APP_PORT=8000
+   ```
 
 #### Frontend:
 1. New → Static Site
 2. Conecta tu repo
 3. Configuración:
    - **Name**: tuc-bares-frontend
-   - **Build Command**: `cd frontend && npm install && npm run build`
-   - **Publish Directory**: `frontend/dist`
-   - **Environment Variables**: 
-     - `VITE_API_URL`: URL de tu backend deployado
+   - **Root Directory**: frontend
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `dist`
+   - **Plan**: Free
+
+4. Environment Variables:
+   ```
+   VITE_API_URL=https://tuc-bares-api.onrender.com
+   ```
+   (Reemplaza con la URL real de tu backend una vez deployado)
 
 ## Verificación
 
