@@ -1,9 +1,10 @@
 from pydantic_settings import BaseSettings
 from typing import Optional
 from dotenv import load_dotenv
+import os
 
-# Cargar .env
-load_dotenv("/home/mauro/Documentos/Tuc-bares/backend/.env")
+# Cargar .env desde la ruta relativa
+load_dotenv()
 
 
 class Settings(BaseSettings):

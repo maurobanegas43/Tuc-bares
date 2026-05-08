@@ -2,8 +2,8 @@ import os
 from supabase import create_client
 from dotenv import load_dotenv
 
-# Cargar desde la ruta correcta
-load_dotenv("/home/mauro/Documentos/Tuc-bares/backend/.env")
+# Cargar variables de entorno
+load_dotenv()
 
 # Cache del cliente
 _client = None
